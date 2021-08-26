@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+​
+<html>
+  <head>
+    {# <link rel="stylesheet" type="text/css" href="E:\WebProgramming/default.css">
+    <link rel="stylesheet" type="text/css" href="E:\WebProgramming/HogwartsSchool.css">  #}
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/mrturck/aframe-joystick/master/joystick.min.js"></script>
+    <meta charset="UTF-8"/>
+    <title>전시회공간</title>
+  <body>
+    <header id="top_of_top">
+      <nav>
+        <ul>
+           {# <h1><a href="D:\한이음_가상전시회\새 폴더\시작화면.html">시작화면</a></h1>
+           </li><h2><a href="D:\한이음_가상전시회\새 폴더\로그인화면.html">로그인화면</a></h2> #}
+        </ul>
+      </nav>
+  </header>
+    <a-scene joystick vr-mode-ui="enabled: false">
+      <a-entity camera id="camera" position="0 1.6 0" look-controls wasd-controls></a-entity>
+      <a-sky src="https://images.unsplash.com/photo-1540811758216-2e0aa73e6134?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80"></a-sky>
+      <a-plane position="0 -3 0" rotation="-90 0 0" width="100" height="100" color="#747474"></a-plane><!--바닥-->
+      <a-plane position="0 8 0" rotation="90 0 0" width="100" height="100" color="#FFFFFF"></a-plane> <!--천장-->
+      <a-plane position="0 1 -50" rotation="0  0 0" width="100" height="20" color="#BDBDBD"></a-plane><!--전방 벽-->
+      <!--<a-box position="0 8 -50" rotation="90 90 0" height="100" width="20" color="#BDBDBD"></a-box>전방 천장 이음새 기둥-->
+      <a-box position="-50 1 -50" rotation="0 45 0" height="20" color="#A6A6A6"></a-box><!--왼쪽 전방 기둥-->
+      <a-plane position="50 1 0" rotation="0  -90 0" width="100" height="20" color="#BDBDBD"></a-plane><!--오른쪽 벽-->
+      <!--<a-box position="50 8 0" rotation="90 0 0" height="100" width="20" color="#BDBDBD"></a-box>오른쪽 천장 이음새 기둥-->
+      <a-box position="50 1 -50" rotation="0 45 0" height="20" color="#A6A6A6"></a-box><!--오른쪽 전방 기둥-->
+      <a-plane position="40 1 50" rotation="0  180 0" width="90" height="20" color="#BDBDBD"></a-plane><!--후방 벽-->
+      <!--<a-box position="0 9 50" rotation="90 90 0" height="100" width="10" color="#BDBDBD"></a-box>오른쪽 천장 이음새 기둥-->   
+      <a-box position="50 1 50" rotation="0 45 0" height="20" color="#A6A6A6"></a-box><!--오른쪽 후방 기둥-->
+      <a-plane position="-50 1 -50" rotation="0  90 0" width="20" height="20" color="#BDBDBD"></a-plane><!--왼쪽 벽-->
+      <!--<a-box position="-50 9 0" rotation="90 0 0" height="100" width="10" color="#BDBDBD"></a-box>왼쪽 천장 이음새 기둥-->   
+      <a-box position="-50 2.5 50" rotation="0 -45 0" height="12" width="0.3" color="black"></a-box><!--왼쪽 후방 기둥-->
+      <a-box position="-25 2.5 50" rotation="0 0 0" height="12" width="0.3" color="black"></a-box><!--후방 벽쪽 창문기둥1-->
+      <a-box position="-5 2.5 50" rotation="0 0 0" height="12" width="0.3" color="black"></a-box>
+      <a-box position="-50 2.5 18" rotation="0 90 0" height="12" width="0.3" color="black"></a-box><!--왼쪽후방기둥쪽 창문기둥1-->
+      <a-box position="-50 2.5 -10" rotation="0 90 0" height="12" width="0.3" color="black"></a-box>
+      <a-box position="-50 2.5 -40" rotation="0 90 0" height="12" width="0.3" color="black"></a-box>
+​
+      <!--T존-->
+      <a-plane position="-2 1 -29" rotation="0  -90 0" width="38" height="20" color="#BDBDBD"></a-plane><!--오른쪽 벽-->
+      <a-plane position="2 1 -29" rotation="0  90 0" width="38" height="20" color="#BDBDBD"></a-plane><!--왼쪽 벽-->
+      <a-plane position="-6 1 -10" rotation="0  180 0" width="8" height="20" color="#BDBDBD"></a-plane><!--후방 벽-->
+      <a-plane position="6 1 -10" rotation="0  180 0" width="8" height="20" color="#BDBDBD"></a-plane><!--후방 벽-->
+      <a-plane position="-10 1 -9" rotation="0  -90 0" width="2" height="20" color="#BDBDBD"></a-plane><!--오른쪽 벽-->
+      <a-plane position="10 1 -9" rotation="0  90 0" width="2" height="20" color="#BDBDBD"></a-plane><!--왼쪽 벽-->
+      <a-plane position="0 1 -8" rotation="0  0 0" width="20" height="20" color="#BDBDBD"></a-plane><!--전방 벽-->
+      <!--안내문구-->
+      <a-image src="https://i.imgur.com/ldXrEYD.png" position="0 1 -7" width="10" height="10"></a-image>
+​
+​
+    <!--정적작품 L존-->
+    <a-plane position="-29 1 0" rotation="0  -90 0" width="60" height="20" color="#BDBDBD"></a-plane><!--오른쪽 벽-->
+    <a-plane position="-28 1 -30" rotation="0  180 0" width="2" height="20" color="#BDBDBD"></a-plane><!--후방 벽-->
+    <a-plane position="-27 1 -1" rotation="0  90 0" width="58" height="20" color="#BDBDBD"></a-plane><!--왼쪽 벽-->
+    <a-plane position="-19 1 30" rotation="0  0 0" width="20" height="20" color="#BDBDBD"></a-plane><!--전방 벽-->
+    <a-plane position="-9 1 29" rotation="0  90 0" width="2" height="20" color="#BDBDBD"></a-plane><!--왼쪽 벽-->
+    <a-plane position="-18 1 28" rotation="0  180 0" width="18" height="20" color="#BDBDBD"></a-plane><!--후방 벽-->
+​
+    <!--동적작품 ㅣ존-->
+    <a-plane position="29 1 0" rotation="0  90 0" width="60" height="20" color="#BDBDBD"></a-plane><!--왼쪽 벽-->
+    <a-plane position="28 1 -30" rotation="0  180 0" width="2" height="20" color="#BDBDBD"></a-plane><!--후방 벽-->
+    <a-plane position="27 1 0" rotation="0  -90 0" width="60" height="20" color="#BDBDBD"></a-plane><!--오른쪽 벽-->
+    <a-plane position="28 1 30" rotation="0  0 0" width="2" height="20" color="#BDBDBD"></a-plane><!--전방 벽-->
+​
+    <!--마지막 커브-->
+    <a-plane position="5 1 18" rotation="0  180 0" width="2" height="20" color="#BDBDBD"></a-plane><!--후방 벽-->
+    <a-plane position="4 1 34" rotation="0  -90 0" width="32" height="20" color="#BDBDBD"></a-plane><!--오른쪽 벽-->
+    <a-plane position="6 1 34" rotation="0  90 0" width="32" height="20" color="#BDBDBD"></a-plane><!--왼쪽 벽-->
+      <!--
+      <a-plane position="0 -1 -50" rotation="0  -90 0" width="40" height="20" color="#BDBDBD"></a-plane>
+      <a-box position="0 -1 -30" rotation="0 45 0" height="20" color="#A6A6A6"></a-box>
+      -->
+​
+    </a-scene>
+  </body>
+</html>
